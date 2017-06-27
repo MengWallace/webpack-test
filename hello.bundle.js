@@ -72,7 +72,7 @@ __webpack_require__(2)
 function hello(str) {
 	document.write(str);
 }
-hello('hello world');
+hello('hello world33eeee4443');
 
 /***/ }),
 /* 1 */
