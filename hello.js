@@ -3,4 +3,4 @@ require('./style.css')
 function hello(str) {
 	document.write(str);
 }
-hello('hello world33eeee4443');
+hello('hello world333');

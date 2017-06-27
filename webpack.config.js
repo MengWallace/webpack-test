@@ -11,7 +11,8 @@ module.exports = {
 		path: __dirname + '/dist',
 		//filename:'bundle.js'//打包后文件名
 		//filename:'[name]-[hash].js'
-		filename:'js/[name]-[chunkhash].js'
+		filename:'js/[name]-[chunkhash].js',
+		publicPath:'http://c345644dn.com/'
 	},
 	plugins: [
 		// new htmlWebpackPackPlugin()
@@ -19,8 +20,14 @@ module.exports = {
 		new htmlWebpackPackPlugin({
 			template:'index.html',
 			//给index的名字加hash值
-			filename:'index-[hash].html',
-			inject:'head'
+			filename:'index.html',
+			inject:'false',
+			title:'webpack is good',
+			date:new Date(),
+			minify: {
+				removeComments:false,
+				collapseWhitespace:false
+			}
 
 		})
 	]

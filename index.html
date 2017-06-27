@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>webpack-demo</title>
+	<title><%= htmlWebpackPlugin.options.title %></title >
+	<script src="<%= htmlWebpackPlugin.files.chunks.main.entry  %>"></script>
 </head>
 <body>
+	<div class="new_date">
+		<%= htmlWebpackPlugin.options.date %>
+		<!-- 对插件进行遍历 -->
+		<% for (var key in htmlWebpackPlugin) { %>
+			<%= key %>
+		<% } %>
+		<!-- 对options进行遍历 -->
+		<% for (var key in htmlWebpackPlugin.options) { %>
+			<%= key %> : <%= JSON.stringify(htmlWebpackPlugin.options[key]) %>
+		<% } %>
 
+		<!-- 对flies进行遍历 -->
+		<% for (var key in htmlWebpackPlugin.files) { %>
+			<%= key %> : <%= JSON.stringify(htmlWebpackPlugin.files[key]) %>
+		<% } %>
+	</div>
+	<script src="<%= htmlWebpackPlugin.files.chunks.a.entry %> " ></script>
 </body>
 </html>
