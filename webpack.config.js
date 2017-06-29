@@ -30,7 +30,7 @@ module.exports = {
 				removeComments:false,
 				collapseWhitespace:false
 			},
-			chunks:['a']
+			chunks:['main']
 
 		}),
 		new htmlWebpackPackPlugin({
